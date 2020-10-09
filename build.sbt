@@ -62,7 +62,7 @@ lazy val commonSettings = Seq(
   addCompilerPlugin(`context-applied`),
   addCompilerPlugin(`kind-projector`),
   update / evictionWarningOptions := EvictionWarningOptions.empty,
-  scalacOptions ++= baseCompilerOptions,
+  scalacOptions ++= baseCompilerOptions
 )
 
 lazy val commonDependencies = Seq()
@@ -82,13 +82,13 @@ lazy val baseCompilerOptions = Seq(
   "-feature",               // Emit warning and location for usages of features that should be imported explicitly.
   "-language:existentials", // Existential types (besides wildcard types) can be written and inferred.
   "-language:higherKinds",  // Allow higher-kinded types.
-  "-unchecked",             // Enable additional warnings where generated code depends on assumptions.
+  "-unchecked"              // Enable additional warnings where generated code depends on assumptions.
 )
 
 lazy val extendedCompilerOptions = Seq(
-  "-Xcheckinit",            // Wrap field accessors to throw an exception on uninitialized access.
-  "-Xfatal-warnings",       // Fail the compilation if there are any warnings.
-  "-Ywarn-dead-code",       // Warn when dead code is identified.
-  "-Ywarn-extra-implicit",  // Warn when more than one implicit parameter section is defined.
-  "-Ywarn-unused"           // Enable or disable specific unused warning.
+  "-Xcheckinit", // Wrap field accessors to throw an exception on uninitialized access.
+  // "-Xfatal-warnings",       // Fail the compilation if there are any warnings.
+  "-Ywarn-dead-code",      // Warn when dead code is identified.
+  "-Ywarn-extra-implicit", // Warn when more than one implicit parameter section is defined.
+  "-Ywarn-unused"          // Enable or disable specific unused warning.
 )
